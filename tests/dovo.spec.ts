@@ -31,7 +31,6 @@ test("RegistrationMouse", async ({page}) => {
     await page.getByRole('textbox', {name: 'Confirm Password *'}).fill('8558585585Zin2')
     await page.getByRole('checkbox', {name: 'I have read and accept the privacy policy *'}).check()
     await page.getByRole('button', {name: 'Create an Account'}).click()
-    await page.waitForTimeout(3000)
 })
 
 test.only('Purchase', async ({page}) => {
