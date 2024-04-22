@@ -40,6 +40,13 @@ test.only('Purchase', async ({page}) => {
     await page.getByRole('navigation').getByRole('link', { name: 'Straight Razors' }).click()
 })
 
+test.only('Purchase-copy', async ({page}) => {
+    await page.goto('https://stagedovo.dovo.com/')
+    await page.getByRole('button', {name: 'Allow all Cookies'}).click()
+    await page.getByText("Razors Shaving Supplies").hover()
+    await page.getByRole('navigation').getByRole('link', { name: 'Straight Razors' }).click()
+})
+
 
 // test.beforeAll(async ({page}) =>{
 //     await page.goto('https://dovo.com/')
